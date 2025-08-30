@@ -1,0 +1,1255 @@
+/* CSS Variables for App Store Links */
+:root {
+    --app-store-link: "https://apps.apple.com/us/app/unipia/id1608830229?l=ko";
+    --google-play-link: "https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=ko";
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+
+.hero, .community, .activities {
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Header Styles */
+.nav{
+  position:sticky; 
+  top:0;
+  background:rgba(255,255,255,.75);
+  backdrop-filter:saturate(120%) blur(8px);
+  border-bottom:1px solid #eee; z-index:10;
+}
+
+.nav-container {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    height: 100%; 
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-left{justify-self:start; 
+  display:flex; 
+  align-items:center; 
+  gap:10px
+}
+
+.brand{display:flex; 
+  align-items:center; 
+  gap:10px; 
+  text-decoration:none; 
+  color:var(--fg)
+}
+
+.brand-logo{width:34px; 
+  height:34px; 
+  display:block
+}
+
+.brand-text{font-weight:700; 
+  letter-spacing:.4px
+}
+
+.nav-center {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  gap: 50px; 
+}
+
+.nav-feature {
+  margin-bottom: 0px;
+}
+
+.nav-business {
+  text-align: center;
+  line-height: 1.4;
+}
+
+.nav-link {
+  font-size: 16px;
+  font-weight: 600; 
+  color: #404357;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center; 
+  padding: 10px;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+.nav-right{justify-self:end; 
+  display:flex; 
+  gap:14px
+}
+
+.icon-btn{
+  width:34px; height:34px; display:grid; place-items:center; border-radius:12px;
+  background:#f6f7fb; cursor:pointer; border:1px solid #eef0f5;
+}
+.icon-btn svg{width:18px; height:18px; stroke:#34384c; fill:none; stroke-width:1.6}
+.icon-btn svg circle[fill]{fill:#34384c}
+
+/*Menu section*/
+.nav-menu-container {
+    position: relative;
+}
+
+/* 드롭다운 메뉴 (기본 상태: 숨김) */
+.dropdown-menu {
+    position: absolute;
+    top: 120%; 
+    right: 0; 
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 8px 0;
+    z-index: 20;
+
+    /* 부드러운 등장을 위한 설정 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+/* JavaScript로 .show 클래스가 추가되면 메뉴를 보여줌 */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 드롭다운 메뉴 안의 링크 스타일 */
+.dropdown-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* 링크에 마우스를 올렸을 때 스타일 */
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Hero Section */
+.hero {
+    background: white;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.hero-logo {
+    width: 234px;
+    height: 271px;
+    object-fit: contain;
+}
+
+.hero-brand-img {
+    width: 280px;
+    margin-top: 0px; 
+    margin-bottom: 20px;
+
+    height: auto;
+    object-fit: contain;
+}
+
+.hero-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1.2;
+}
+
+.hero-text {
+    margin-bottom: 15px;
+}
+
+.campus-hub-img {
+    width: auto;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 4px;
+}
+
+.star {
+    color: #6B46FF;
+    font-size: 24px;
+    margin-left: 8px;
+    vertical-align: super;
+}
+
+.brand-title {
+    font-size: 52px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: .2px;
+    margin-bottom: 1px;
+}
+
+.app-description {
+    color: #999;
+    font-size: 18px;
+    font-weight: 400;
+
+    margin-top: -5px;
+    margin-bottom: 10%;
+    letter-spacing: 0.3px;
+}
+
+.app-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.store{
+    display:inline-block; 
+    transform:translateZ(0)
+}
+
+.app-btn {
+    cursor: pointer;
+}
+
+.app-btn img {
+    height: 58px;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.app-btn:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+/* Community Section with Slider */
+.community {
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.community-container {
+    width: 100%;
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Slide Content */
+.slide-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.slide-content.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: auto;
+}
+
+.slide-content.prev {
+    transform: translateX(-100%);
+}
+
+.slide-content.next {
+    transform: translateX(100%);
+}
+
+/* Slide Navigation Arrows */
+.slide-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #E5E5E5;
+    border: none;
+    color: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 100;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slide-arrow:hover {
+    background: #D0D0D0;
+    color: #000;
+    transform: translateY(-50%) scale(1.05);
+}
+
+.slide-arrow-left {
+    left: 40px;
+}
+
+.slide-arrow-right {
+    right: 40px;
+}
+
+.section-title {
+    font-size: 52px;
+    font-weight: 800;
+    text-align: left;
+    margin-bottom: 30px;
+    margin-left: 0;
+    margin-top: 0;
+    color: #000;
+}
+
+/* Section Title Container - Independent positioning */
+.section-title-container {
+    position: absolute;
+    top: 12%;
+    left:10;
+    z-index: 10;
+    width: 100%;
+}
+
+.section-title-container .section-title {
+    font-size: 52px;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+.community-left h2{
+    font-size: 52px;
+}
+
+/* Coming Soon specific styling */
+.coming-soon-left {
+    flex: 0 0 300px !important;
+    max-width: 300px !important;
+    padding-right: 0 !important;
+}
+
+.coming-soon-left .section-title {
+    white-space: nowrap;
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+}
+
+/* Coming Soon center positioning */
+#coming-soon-section .community-center {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Coming Soon iPhone mockup specific size */
+#coming-soon-section .iphone-mockup {
+    width: 400px; 
+    height: auto;
+    object-fit: contain;
+}
+
+.board-sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    height: 100%;
+}
+
+.community-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 40px;
+    max-width: 1400px;
+    height: calc(100vh - 80px);
+    margin: 0 auto;
+}
+
+/* Left Content */
+.community-left {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 0;
+    position: relative;
+    margin-top: 22%;
+}
+
+#employment-section .community-left {
+    margin-top: 30%;
+}
+
+.board-section h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #000;
+}
+
+.board-list {
+    list-style: none;
+    padding: 0;
+}
+
+.board-list li {
+    color: #555;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.board-list li:before {
+    content: "●";
+    color: #6B46FF;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-right: 10px;
+}
+
+
+/* Center iPhone */
+.community-center {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 30px;
+    position: relative;
+}
+
+.iphone-mockup {
+    width: 340px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.1));
+}
+
+/* Mockup Overlay Text */
+.mockup-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+    display: none; 
+}
+
+.mockup-overlay h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #6B46FF;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+/* Right Features */
+.community-right {
+    flex: 1;
+    max-width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    padding-left: 20px;
+    margin-top: 10%;
+}
+
+.feature-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.feature-dot {
+    width: 24px;
+    height: 24px;
+    background: #6B46FF;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 3.5%;
+}
+
+.feature-box h4 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #000;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.feature-box p {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Activities Section */
+.activities {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.activities .section-title{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.activities-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+
+/* Vertical lines on sides */
+
+.activities-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    height: 60vh;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.activity-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f5f5f5;
+}
+
+.activity-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover img {
+    transform: scale(1.05);
+}
+
+/*아오 내 1시간 */
+
+.activity-item.small:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.activity-item.small:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.activity-item.small:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 3;
+}
+
+.activity-item.small:nth-child(4) {
+    grid-column: 3/ span 2;
+    grid-row: 1 / span 2;
+}
+
+.activity-item.small:nth-child(5) {
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.activity-item.small:nth-child(6) {
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.activity-item.small:nth-child(7) {
+    grid-column: 5/ span 2;
+    grid-row: 1 / span 2;
+}
+
+.activity-item.small:nth-child(8) {
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.activity-item.small:nth-child(9) {
+    grid-column: 6;
+    grid-row: 3;
+}
+
+/* Activity Arrows - Removed */
+
+/* Slick Slider Custom Styles */
+.slick-prev,
+.slick-next {
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: #6B46FF;
+    font-size: 30px;
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    color: #6B46FF;
+    font-size: 12px;
+}
+
+/* Advertising Section */
+.advertising {
+    padding: 0;
+    background: #f8f9fa;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.advertising .section-title{
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 3%;
+}
+
+/* Advertising Content - Vertical Layout */
+.advertising-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Advertising Images Container */
+.ad-images-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 60px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.ad-description-img-left,
+.ad-description-img-right {
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+    display: block;
+}
+
+/* Descriptions Container */
+.ad-descriptions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    justify-items: center;
+    align-items: start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.ad-description {
+    text-align: center;
+}
+
+.ad-description h3{
+    font-size: 26px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.ad-description p{
+    color: #666;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* 폰 목업 스타일 */
+
+.phone-frame {
+    width: 100%;
+    max-width: 320px;
+    z-index: 2;
+    position: relative; 
+    }
+
+/* Partners Section */
+.partners {
+    padding: 0;
+    background: white;
+    height: 100vh;
+    min-height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.partners .section-title {
+    font-size: 54px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* 모든 로고 줄의 기본 스타일 */
+.partners-row {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+/* 고정된 로고 줄 스타일 */
+.static-row {
+    justify-content: center; 
+    gap: 40px; 
+}
+
+/* 스크롤되는 로고 줄 스타일 */
+.scrolling-row {
+    overflow: hidden; /* 영역을 벗어나는 로고 숨김 */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.partners-track {
+    display: flex;
+    flex-shrink: 0;
+}
+
+/* 로고 개별 스타일 */
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px; 
+    height: 80px; 
+    max-height: 180px; 
+    max-width: 300px; 
+}
+
+.partner-logo img {
+    max-height: 180px; 
+    max-width: 280px;
+}
+
+.partner-logo:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* 무한 스크롤 애니메이션 */
+.scroll-left {
+    animation: scroll 30s linear infinite;
+}
+
+.scroll-right {
+    animation: scroll-reverse 30s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@keyframes scroll-reverse {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(0); }
+}
+
+/* Combined Footer Section */
+.footer-combined {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+/* Get In Touch Part - Top Half */
+.footer-touch {
+    background: #1a1a1a;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-touch h2 {
+    font-size: 52px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.footer-touch p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 14px 50px;
+    background: white;
+    color: #6B46FF;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Download Part - Bottom Half */
+.footer-download-section {
+    background: #6B46FF;
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer-download-section h3 {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.footer-app-buttons {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-app-btn {
+    cursor: pointer;
+}
+
+.footer-app-btn img {
+    height: 55px;
+    transition: transform 0.3s;
+}
+
+.footer-app-btn:hover img {
+    transform: scale(1.08);
+}
+
+
+
+/* 13-inch MacBook (1440px width) */
+@media (max-width: 1440px) {
+    .hero-logo {
+        width: 175px;
+        height: 203px;
+    }
+    
+    .hero-brand-img {
+        width: 210px;
+    }
+    
+    .brand-title {
+        font-size: 39px;
+    }
+    
+    .app-description {
+        font-size: 14px;
+        margin-bottom: 5%;
+    }
+    
+    .app-btn img {
+        height: 44px;
+    }
+    
+    .section-title {
+        font-size: 39px;
+    }
+    
+    .community-left .section-title {
+        font-size: 39px;
+    }
+    
+    .iphone-mockup {
+        width: 255px;
+    }
+    
+    .board-section h3 {
+        font-size: 17px;
+    }
+    
+    .board-list li {
+        font-size: 12px;
+    }
+    
+    .feature-box h4 {
+        font-size: 17px;
+    }
+    
+    .feature-box p {
+        font-size: 12px;
+    }
+    
+    .activities-grid {
+        height: 45vh;
+        gap: 8px;
+    }
+    
+    .advertising .section-title,
+    .partners .section-title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+    
+    .ad-description-img {
+        max-width: 428px;
+    }
+    
+    .ad-description h3 {
+        font-size: 20px;
+    }
+    
+    .ad-description p {
+        font-size: 12px;
+    }
+    
+    .footer-touch h2 {
+        font-size: 39px;
+    }
+    
+    .footer-touch p {
+        font-size: 14px;
+    }
+    
+    .footer-download-section h3 {
+        font-size: 28px;
+        margin-bottom: 25px;
+    }
+    
+    .contact-btn {
+        font-size: 16px;
+        padding: 10px 40px;
+    }
+    
+    .footer-app-btn img {
+        height: 42px;
+    }
+    
+    .community-content {
+        padding: 30px;
+        gap: 30px;
+    }
+    
+    .board-sections {
+        gap: 30px;
+    }
+    
+    .community-right {
+        gap: 20px;
+    }
+    
+    .partner-logo {
+        padding: 30px 30px;
+    }
+    
+    .partners-row {
+        margin: 30px 0;
+    }
+}
+
+/* 14-inch MacBook (1512px width) */
+@media (min-width: 1441px) and (max-width: 1512px) {
+    .hero-logo {
+        width: 185px;
+        height: 214px;
+    }
+    
+    .hero-brand-img {
+        width: 221px;
+    }
+    
+    .brand-title {
+        font-size: 41px;
+    }
+    
+    .section-title {
+        font-size: 41px;
+    }
+    
+    .iphone-mockup {
+        width: 268px;
+    }
+    
+    .activities-grid {
+        height: 47vh;
+    }
+    
+    .community-content {
+        padding: 32px;
+        gap: 32px;
+    }
+}
+
+/* 15-inch MacBook (1680px width) */
+@media (min-width: 1513px) and (max-width: 1680px) {
+    .hero-logo {
+        width: 205px;
+        height: 237px;
+    }
+    
+    .hero-brand-img {
+        width: 245px;
+    }
+    
+    .brand-title {
+        font-size: 45px;
+    }
+    
+    .section-title {
+        font-size: 45px;
+    }
+    
+    .iphone-mockup {
+        width: 298px;
+    }
+    
+    .activities-grid {
+        height: 52vh;
+    }
+    
+    .community-content {
+        padding: 35px;
+        gap: 35px;
+    }
+}
+
+/* 27-inch and larger screens - keep original sizes */
+@media (min-width: 1920px) {
+    /* Original sizes maintained */
+}
+
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+    
+    .hero-left {
+        order: 1;
+    }
+    
+    .hero-right {
+        order: 2;
+        text-align: center;
+    }
+    
+    .hero-logo {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-brand-img {
+        width: 180px;
+    }
+    
+    .hero-text h1 {
+        font-size: 28px;
+    }
+    
+    .brand-title {
+        font-size: 48px;
+    }
+    
+    .app-buttons {
+        justify-content: center;
+    }
+    
+    .community-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .iphone-mockup {
+        width: 200px;
+    }
+    
+    .phone-mockup {
+        text-align: center;
+    }
+    
+    .additional-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .advertising-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    #contactForm {
+        flex-direction: column;
+    }
+}
