@@ -1,7 +1,7 @@
 // 딥링크 처리 공통 함수
 class DeepLinkHandler {
   constructor(config) {
-    this.resourceType = config.resourceType; // 'post', 'marketplace', 'profile'
+    this.resourceType = config.resourceType; // 'post', 'marketplace'
     this.customScheme = config.customScheme; // 'unipia://post/', etc.
     this.playStoreUrl = 'https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB';
     this.appStoreUrl = 'https://apps.apple.com/us/app/unipia/id1608830229';
@@ -9,11 +9,10 @@ class DeepLinkHandler {
     this.appOpened = false;
   }
 
-  // URL에서 리소스 ID 추출
+  // URL에서 리소스 ID 추출 (쿼리 파라미터)
   extractResourceId() {
-    const pathParts = window.location.pathname.split('/').filter(p => p);
-    // URL: /post/123 → ['post', '123']
-    return pathParts.length > 1 ? pathParts[1] : null;
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('id');
   }
 
   // 딥링크 시도
@@ -27,15 +26,12 @@ class DeepLinkHandler {
     const deepLinkUrl = `${this.customScheme}${this.resourceId}`;
     console.log('Attempting deep link:', deepLinkUrl);
 
-    // Universal Links / App Links는 브라우저가 자동으로 처리
-    // 이 코드는 폴백용 (Custom Scheme)
-    
     // iOS에서는 iframe을 사용해 커스텀 스킴 시도
     if (this.isIOS()) {
       this.tryIOSDeepLink(deepLinkUrl);
     } else {
       // Android는 직접 시도
-      window.location = deepLinkUrl;
+      window.location.href = deepLinkUrl;
     }
 
     // 1.5초 후에도 페이지에 있으면 앱이 없는 것으로 판단
