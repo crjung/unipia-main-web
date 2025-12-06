@@ -1,0 +1,13 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.unipia.unipia",
+    "sha256_cert_fingerprints": [
+      "D3:D6:8D:02:52:EE:75:BC:2E:61:2B:74:FB:19:DA:A9:96:6F:9C:80",
+      "6B:3B:10:3D:74:D1:4F:D4:75:5D:3A:47:3D:1C:98:78:1D:C6:1D:BC",
+      "8D:82:69:1A:45:9F:75:A0:70:F2:DF:35:95:FA:A7:39:FD:3D:47:DD",
+      "1C:F6:60:F1:E0:38:0D:E6:AD:0F:D8:62:23:EE:48:8B:78:6A:95:48"
+    ]
+  }
+}]

@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "8AFNHKX9D7.com.unipia.unipia",
+        "paths": [
+          "/post/*",
+          "/marketplace/*"
+        ]
+      }
+    ]
+  }
+}

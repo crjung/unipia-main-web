@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unipia Marketplace - View Item</title>
+    <link rel="icon" href="../Images/Favicon.png" type="image/x-icon">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Check out this item on Unipia Marketplace">
+    <meta property="og:description" content="Buy and sell items with students at your university">
+    <meta property="og:image" content="https://unipia.uk/Images/og-marketplace.jpg">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="product">
+    
+    <!-- 위의 post/index.html과 동일한 스타일 사용 -->
+    <style>
+        /* post/index.html의 style 복사 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="../Images/U로고.png" alt="Unipia Logo" class="logo">
+        <h1>View this item in the Unipia app</h1>
+        <p>Browse marketplace items and chat with sellers in our mobile app</p>
+        
+        <div id="loading">
+            <div class="spinner"></div>
+            <p>Opening app...</p>
+        </div>
+        
+        <div class="buttons" id="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" class="btn">
+                <img src="../Images/Googlestore.png" alt="Get it on Google Play">
+            </a>
+            <a href="https://apps.apple.com/us/app/unipia/id1608830229" class="btn">
+                <img src="../Images/Appstore.png" alt="Download on App Store">
+            </a>
+        </div>
+
+        <div class="back-link">
+            <a href="../index.html">← Back to Unipia Website</a>
+        </div>
+    </div>
+
+    <script src="../js/deeplink-handler.js"></script>
+    <script>
+        const handler = new DeepLinkHandler({
+            resourceType: 'marketplace',
+            customScheme: 'unipia://marketplace/'
+        });
+
+        window.onload = function() {
+            handler.attemptDeepLink();
+        };
+    </script>
+</body>
+</html>
