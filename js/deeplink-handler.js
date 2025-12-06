@@ -35,13 +35,6 @@ class DeepLinkHandler {
       window.location.href = deepLinkUrl;
     }
 
-    // 1.5초 후에도 페이지에 있으면 앱이 없는 것으로 판단
-    // setTimeout(() => {
-    //   if (!this.appOpened) {
-    //     this.showStoreButtons();
-    //   }
-    // }, 1500);
-
     this.showStoreButtons();
 
     // 페이지 숨김 감지 (앱이 열린 경우)
