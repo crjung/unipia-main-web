@@ -18,27 +18,27 @@ class DeepLinkHandler {
 
   // 딥링크 시도
   attemptDeepLink() {
-    if (!this.resourceId) {
-      console.log("No resource ID found");
-      this.showStoreButtons();
-      return;
-    }
+    // if (!this.resourceId) {
+    //   console.log("No resource ID found");
+    //   this.showStoreButtons();
+    //   return;
+    // }
 
     const deepLinkUrl = `${this.customScheme}${this.resourceId}`;
     console.log("Attempting deep link:", deepLinkUrl);
 
-    // iOS에서는 iframe을 사용해 커스텀 스킴 시도
-    if (this.isIOS()) {
-      this.tryIOSDeepLink(deepLinkUrl);
-    } else {
-      // Android는 직접 시도
-      window.location.href = deepLinkUrl;
-    }
+    // // iOS에서는 iframe을 사용해 커스텀 스킴 시도
+    // if (this.isIOS()) {
+    //   this.tryIOSDeepLink(deepLinkUrl);
+    // } else {
+    // Android는 직접 시도
+    window.location.href = deepLinkUrl;
+    // }
 
-    this.showStoreButtons();
+    // this.showStoreButtons();
 
     // 페이지 숨김 감지 (앱이 열린 경우)
-    this.detectAppOpened();
+    // this.detectAppOpened();
   }
 
   // iOS 딥링크 시도 (iframe 사용)

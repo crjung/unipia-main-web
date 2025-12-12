@@ -18,6 +18,9 @@
     <meta name="twitter:title" content="Check out this post on Unipia">
     <meta name="twitter:description" content="Join the conversation at your university">
     <meta name="twitter:image" content="https://unipia.uk/Images/og-community.jpg">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
     
     <style>
         * {
@@ -110,7 +113,6 @@
             align-items: center;
             justify-content: center;
             padding: 15px 30px;
-            background: white;
             color: #667eea;
             text-decoration: none;
             border-radius: 12px;
@@ -147,21 +149,13 @@
         <h1>View this post in the Unipia app</h1>
         <p>Get the full experience by opening this in our mobile app</p>
         
-        <div id="loading">
-            <div class="spinner"></div>
-            <p>Opening app...</p>
-        </div>
-        
-        <div class="buttons" id="store-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" 
-               class="btn" 
-               id="play-store">
-                <img src="../Images/Googlestore.png" alt="Get it on Google Play">
-            </a>
-            <a href="https://apps.apple.com/us/app/unipia/id1608830229" 
-               class="btn" 
-               id="app-store">
+        <!-- App Store Buttons -->
+        <div class="app-buttons">
+            <a id="btnAppStore" href="https://apps.apple.com/us/app/unipia/id1608830229?l=ko" class="app-btn" target="_blank" rel="noopener">
                 <img src="../Images/Appstore.png" alt="Download on App Store">
+            </a>
+            <a id="btnGooglePlay" href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=ko" class="app-btn" target="_blank" rel="noopener">
+                <img src="../Images/Googlestore.png" alt="Get it on Google Play">
             </a>
         </div>
 

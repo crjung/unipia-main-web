@@ -12,6 +12,9 @@
     <meta property="og:image" content="https://unipia.uk/Images/U로고.png">
     <meta property="og:url" content="">
     <meta property="og:type" content="product">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
     
     <style>
         * {
@@ -141,17 +144,13 @@
         <h1>View this item in the Unipia app</h1>
         <p>Browse marketplace items and chat with sellers in our mobile app</p>
         
-        <div id="loading">
-            <div class="spinner"></div>
-            <p>Opening app...</p>
-        </div>
-        
-        <div class="buttons" id="store-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=en_GB" class="btn">
-                <img src="../Images/Googlestore.png" alt="Get it on Google Play">
-            </a>
-            <a href="https://apps.apple.com/us/app/unipia/id1608830229" class="btn">
+        <!-- App Store Buttons -->
+        <div class="app-buttons">
+            <a id="btnAppStore" href="https://apps.apple.com/us/app/unipia/id1608830229?l=ko" class="app-btn" target="_blank" rel="noopener">
                 <img src="../Images/Appstore.png" alt="Download on App Store">
+            </a>
+            <a id="btnGooglePlay" href="https://play.google.com/store/apps/details?id=com.unipia.unipia&hl=ko" class="app-btn" target="_blank" rel="noopener">
+                <img src="../Images/Googlestore.png" alt="Get it on Google Play">
             </a>
         </div>
 
